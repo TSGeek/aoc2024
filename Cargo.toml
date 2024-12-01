@@ -1,0 +1,14 @@
+[workspace]
+members = ["day01"]
+resolver = "2"
+
+[workspace.package]
+name = "aoc2024"
+version = "1.0.0"
+edition = "2021"
+description = "Advent of code 2024"
+authors = [
+    "Martin GRUDLER <devel@grudler.eu>"
+]
+
+[workspace.dependencies]

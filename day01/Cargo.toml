@@ -1,0 +1,8 @@
+[package]
+name = "day01"
+description = "Day 1 of AOC 2024"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
