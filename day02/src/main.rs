@@ -8,8 +8,8 @@ fn phase_one() {
         let values: Vec<i32> = line.split(" ").map(|s| s.parse::<i32>().unwrap()).collect();
 
         match check_safe(&values) {
-            IsSafe::True => safe_count += 1,
-            IsSafe::False(_) => (),
+            True => safe_count += 1,
+            False(_) => (),
         }
     }
     println!("Phase 1 - Number of safe reports : {}", safe_count);
@@ -49,10 +49,12 @@ enum IsSafe<T> {
 }
 
 fn check_safe(values: &[i32]) -> IsSafe<usize> {
-    let mut is_increasing = false;
-    if values[0] < values[1] && values[1] < values[3] {
+    let is_increasing;
+    if values[0] < values[1] && values[1] < values[2] {
         is_increasing = true;
-    } else if values[0] == values[1] {
+    } else if  values[0] > values[1] && values[1] > values[2] {
+        is_increasing = false;
+    } else {
         return False(0)
     }
 
