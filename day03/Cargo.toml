@@ -6,3 +6,4 @@ description = "Day 3 of AOC 2024"
 authors.workspace = true
 
 [dependencies]
+regex = "1.11.1"
